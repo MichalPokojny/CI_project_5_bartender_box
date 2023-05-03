@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Comme:wght@300&family=Raleway:wght@200&display=swap');
 
+/* ---- CORE STYLING ---- */
+html {
+    height: 100%;
+}
 
 body {
     font-family: 'Comme', sans-serif;
@@ -11,5 +15,5 @@ body {
 }
 
 .text-black {
-    color:#000;
+    color:#000 !important;
 }
