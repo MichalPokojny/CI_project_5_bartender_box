@@ -3,8 +3,13 @@
 
 body {
     font-family: 'Comme', sans-serif;
+    background-color: #000;
 }
 
 .navbar {
     font-family: 'Raleway', sans-serif;
+}
+
+.text-black {
+    color:#000;
 }
