@@ -34,7 +34,7 @@
   <body>
     <!-- Header -->
     <header class="containter-fluid fixed-top">
-        <div class="row bg-white pt-lg-2 d-none d-lg d-lg-flex" id="topnav">
+        <div class="row d-none d-lg d-lg-flex" id="topnav">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link custom-logo">
                     <img src="{% static 'media/logo.png' %}" alt="logo">
@@ -43,6 +43,20 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0"></div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                    <li class="list-inline-item">
+                        <form method="GET" action="#">
+                            <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
+                                <div class="input-group">
+                                    <input class="form-control rounded rounded-pill border-0 bg-light" type="search" name="q" placeholder="Search our site" aria-describedby="search-button">
+                                        <div class="input-group-append">
+                                            <button id="button-addon1" type="submit" class="btn btn-link text-primary text-black">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </div>
+                                </div>
+                            </div>
+                        </form> 
+                    </li>
                     <li class="list-inline-item dropdown">
                         <a href="#" class="nav-link text-black" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
