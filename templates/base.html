@@ -43,7 +43,20 @@
   <body>
     <!-- Header -->
     <header class="containter-fluid fixed-top">
-        
+        <div class="row">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <img src="{% static 'media/logo.png' %}" alt="logo">
+                </a>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0"></div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                    <li class="list-inline-item dropdown"></li>
+                    <li class="list-inline-item"></li>
+                </ul>
+            </div>
+        </div>
         
     </header>
 
@@ -53,10 +66,15 @@
     
     {% block page_header %}
     {% endblock %}
-
+    
+    <main>
     {% block content %}
     {% endblock %}
+    </main>
 
+    <footer>
+
+    </footer>
     {% block postloadjs %}
     {% endblock %}
 
