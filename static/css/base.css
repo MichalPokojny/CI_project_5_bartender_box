@@ -26,6 +26,11 @@ body {
 
 }
 
+.top-banner {
+    color: #eeda90;
+    background-color: #000;
+}
+
 .custom-logo {
     padding-top: 0 !important;
 }
