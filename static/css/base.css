@@ -21,5 +21,34 @@ body {
 }
 
 .custom-logo {
+    padding-top: 0 !important;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width : 80%;
+    }
+}
+
+@media (min-width : 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index : 1030;
+    }
+
+    .header-container {
+        padding-top :100px;
+    }
+}
+
+#index-image {
+    background: url('../media/index-image.jpg') no-repeat left center fixed;
+    background-color: #000;
+    background-size: contain;
+    height: calc(100vh - 100px);
+    
 
 }
