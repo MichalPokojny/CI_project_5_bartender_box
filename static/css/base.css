@@ -23,7 +23,7 @@ body {
 .navbar {
     font-family: 'Raleway', sans-serif;
     background-color: #eeda90;
-
+    padding: 0 1rem !important;
 }
 
 .top-banner {
@@ -55,7 +55,15 @@ body {
     }
 }
 
-@media (max-width : 992px) {
+@media (max-width : 991px) {
+    .header-container {
+        padding-top: 183px;
+    }
+
+    body {
+        height: calc(100vh - 183px);
+    }
+
     .navbar-nav {
         float: right;
         text-align: right;
