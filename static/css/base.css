@@ -113,3 +113,10 @@ body {
     cursor: pointer;
     color: #eeda90;
   }
+
+  /* ---- Products page ----- */
+
+  a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #eeda90 !important;
+  }
