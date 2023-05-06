@@ -23,10 +23,10 @@
                 Cocktails
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Vodka</a>
-                <a href="" class="dropdown-item">Gin</a>
-                <a href="" class="dropdown-item">Whiskey</a>
-                <a href="" class="dropdown-item">All Cocktails</a>
+                <a href="{% url 'products' %}?category=vodka" class="dropdown-item">Vodka</a>
+                <a href="{% url 'products' %}?category=gin" class="dropdown-item">Gin</a>
+                <a href="{% url 'products' %}?category=whiskey" class="dropdown-item">Whiskey</a>
+                <a href="{% url 'products' %}?category=vodka,gin,whiskey" class="dropdown-item">All Cocktails</a>
             </div>
         </li>
 
@@ -35,9 +35,9 @@
                 Bar Tools
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Shakers</a>
-                <a href="" class="dropdown-item">Spoons</a>
-                <a href="" class="dropdown-item">All tools</a>
+                <a href="{% url 'products' %}?category=shakers" class="dropdown-item">Shakers</a>
+                <a href="{% url 'products' %}?category=bar_spoons" class="dropdown-item">Bar Spoons</a>
+                <a href="{% url 'products' %}?category=shakers,bar_spoons" class="dropdown-item">All tools</a>
             </div>
         </li>
 
@@ -46,10 +46,9 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=clearence" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=deals,clearence" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>
