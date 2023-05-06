@@ -112,3 +112,27 @@
     </div>
 
 {% endblock %}
+
+{% block extra_js %}
+{{ block.super }}
+<script type="text/javascript">
+    $('#sort-selector').change(function() {
+        var selector = $(this);
+        var currentUrl = new URL(window.location);
+    
+        var selectedVal = selector.val();
+        var [sort, direction] = selectedVal.split("_");
+    
+        currentUrl.searchParams.set("sort", sort);
+        currentUrl.searchParams.set("direction", direction);
+    
+        if(selectedVal === "reset"){
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
+        }
+    
+        window.location.replace(currentUrl);
+    });
+ </script>
+ 
+{% endblock %}
