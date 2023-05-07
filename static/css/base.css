@@ -114,9 +114,27 @@ body {
     color: #eeda90;
   }
 
-  /* ---- Products page ----- */
+  /* ----- Products page ----- */
 
   a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #eeda90 !important;
+  }
+
+  /* ----- Product detail page ----- */
+
+  .add-to-bag-btn {
+    background-color: #eeda90;
+    border: 1px solid #000000;
+    border-radius: 50rem; 
+    color:#eeda90; 
+    font-size : 75%; 
+    font-weight: 700; 
+    line-height: 1;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+
+  .add-to-bag-btn:hover { 
     background: #212529 !important;
     color: #eeda90 !important;
   }
