@@ -18,8 +18,8 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col">
+        <div class="row g-0">
+            <div class="col-">
                 {% if bag_items %}
                     <div class="table-responsive rounded">
                         <table class="table table-sm table-borderless">
@@ -29,27 +29,27 @@
                                     <th scope="col"></th>
                                     <th scope="col">Price</th>
                                     <th scope="col">Qty</th>
-                                    <th scope="col">Subtotal</th>
+                                    <th scope="col" class="text-right">Subtotal</th>
                                 </tr>
                             </thead>
 
                             {% for item in bag_items %}
                                 <tr>
-                                    <td class="p-3 w-25">
+                                    <td class="w-25">
                                         <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                                     </td>
-                                    <td class="py-3">
-                                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                    <td>
+                                        <p class="my-0">{{ item.product.name }}</p>
                                         <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                     </td>
-                                    <td class="py-3">
+                                    <td>
                                         <p class="my-0">€{{ item.product.price }}</p>
                                     </td>
-                                    <td class="py-3 w-25">
+                                    <td class="w-25">
                                         <p class="my-0">{{ item.quantity }}</p>
                                     </td>
-                                    <td class="py-3">
-                                        <p class="my-0">€ {{ item.product.price }}</p>
+                                    <td>
+                                        <p class="my-0 text-right">€ {{ item.product.price }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
