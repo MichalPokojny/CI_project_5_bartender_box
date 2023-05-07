@@ -78,7 +78,7 @@ body {
     background: url('../media/index-image.jpg') no-repeat left center fixed;
     background-color: #000;
     background-size: contain;
-    height: calc(164vh - 100px);
+    height: calc(100vh - 100px);
 }
 
 .welcome-text {
