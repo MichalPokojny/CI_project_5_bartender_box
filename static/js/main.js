@@ -20,6 +20,8 @@ $(document).ready(function() {
         }
     }, 5000);
 
+    // Sorting script for products.html for sorting products in asc or desc order
+    
     $('#sort-selector').change(function() {
         var selector = $(this);
         var currentUrl = new URL(window.location);
