@@ -154,3 +154,10 @@ body {
     background: #212529 !important;
     color: #eeda90 !important;
   }
+
+
+  /* ----- Shopping bag page ----- */
+
+  .update-link, .remove-item {
+    cursor: pointer;
+  }
