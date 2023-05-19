@@ -27,8 +27,8 @@
                                 <tr>
                                     <th scope="col">Product Info</th>
                                     <th scope="col"></th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Qty</th>
+                                    <th scope="col" class="text-right">Price</th>
+                                    <th scope="col" class="text-right">Qty</th>
                                     <th scope="col" class="text-right">Subtotal</th>
                                 </tr>
                             </thead>
@@ -43,10 +43,10 @@
                                         <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                     </td>
                                     <td>
-                                        <p class="my-0">€{{ item.product.price }}</p>
+                                        <p class="my-0 text-right">€{{ item.product.price }}</p>
                                     </td>
                                     <td class="w-25">
-                                        <p class="my-0">{{ item.quantity }}</p>
+                                        <p class="my-0 text-right">{{ item.quantity }}</p>
                                     </td>
                                     <td>
                                         <p class="my-0 text-right">€ {{ item.product.price }}</p>
