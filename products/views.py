@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category
+# pylint: disable=no-member
 
 
 def all_products(request):
@@ -27,7 +28,7 @@ def all_products(request):
                 direction = request.GET["direction"]
                 if direction == "desc":
                     sortkey = f"-{sortkey}"
-                products = products.order_by(sortkey)    
+                products = products.order_by(sortkey)
 
         if "category" in request.GET:
             categories = request.GET["category"].split(",")
