@@ -144,6 +144,8 @@ body {
     z-index: 999999;
   }
 
+/* ----- Toasts ----- */
+
   .custom-toast {
     overflow: visible;
   }
@@ -226,4 +228,13 @@ body {
 
   .update-link, .remove-item {
     cursor: pointer;
+  }
+
+  #submit-button {
+    background:#eeda90
+  }
+  
+  #submit-button:hover { 
+    background: #212529 !important;
+    color: #eeda90 !important;
   }
