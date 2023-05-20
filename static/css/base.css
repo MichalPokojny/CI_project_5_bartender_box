@@ -46,9 +46,9 @@ body {
     background-color: red;
     color: #eeda90;
     font-size: 7px;
-    padding: 7px 4px;
+    padding: 9px 4px;
     border-radius: 50rem;
-    height: 15px;
+    height: 17px;
   }
 
 @media (min-width: 1200px) {
