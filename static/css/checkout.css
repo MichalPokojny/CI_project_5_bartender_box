@@ -60,3 +60,11 @@
   .loading-spinner .fa-spin {
     font-size: 100px !important;
   }
+
+  select, select option {
+    color: #000;
+  }
+
+  select:invalid, select option[value=""] {
+    color: #aab7c4 !important;
+  }
