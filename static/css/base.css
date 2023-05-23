@@ -239,9 +239,8 @@ body {
     color: #eeda90 !important;
   }
 
-  /* ----- Allauth ------ */
+/* ----- Allauth ------ */
 
-  /* Allauth form formatting */
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem; 
@@ -291,4 +290,24 @@ body {
 
 .allauth-form-inner-content a {
 	color: #17a2b8;
+}
+
+/* ----- Profile ------ */
+
+#profile-update-form .form-control {
+    color: #000;
+    font-weight: 400;
+}
+
+#profile-update-form input::placeholder {
+    color: #aab7c4;
+}
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: #000;
+}
+
+#id_default_country option:first-child {
+    color: #aab7c4;
 }
