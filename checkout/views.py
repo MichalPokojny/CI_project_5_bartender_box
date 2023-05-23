@@ -1,6 +1,7 @@
 # pylint: disable=no-member
 from django.shortcuts import (
     render, redirect, reverse, get_object_or_404, HttpResponse)
+from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 
@@ -14,6 +15,7 @@ import stripe
 import json
 
 
+@require_POST
 def cache_checkout_data(request):
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
@@ -31,8 +33,7 @@ def cache_checkout_data(request):
         messages.error(
             request,
             'Sorry, your payment cannot be \
-            processed right now. Please try again later.',
-        )
+            processed right now. Please try again later.',)
         return HttpResponse(content=e, status=400)
 
 
