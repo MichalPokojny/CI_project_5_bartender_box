@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+
+<div class="container header-container">
+   <div class="row">
+      <div class="col"></div>
+   </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+   <div class="row">
+      <div class="col-12 col-md-6">
+         <hr>
+         <h2 class="mb-4">Product Management</h2>
+         <h5 class="text-muted">Add a Product as:</h5>
+         <h5 class="text-uppercase text-muted"><i class="fas fa-user"></i> {{ user }}</h5>
+         <hr>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-12 col-md-6">
+         <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form | crispy }}
+            <div class="text-right">
+               <a href="{% url 'products' %}" aria-label="Go to the products page" class="btn btn-outline-black rounded-pill">Cancel</a>
+               <button class="btn btn-black rounded-pill" type="submit" aria-label="Add Product">Add Product</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+{{ block.super }}
+
+{% endblock %}
