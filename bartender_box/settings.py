@@ -18,7 +18,7 @@ SECRET_KEY = 'django-insecure-up8^s6!4qr#rh=o7l=%bg_=)$w1snww+_62@q@_lh7ux&$@__q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://bartener-box.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['bartener-box.herokuapp.com', '8000-michalpokojny-ci-project-1rc3p7gzfc.us2.codeanyapp.com']
 # 8000-michalpokojny-ci-project-1rc3p7gzfc.us2.codeanyapp.com
 
 
