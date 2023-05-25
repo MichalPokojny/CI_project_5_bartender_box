@@ -1,0 +1,1 @@
+web: gunicorn bartender_box.wsgi:application
