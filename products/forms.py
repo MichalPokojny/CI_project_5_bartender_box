@@ -27,4 +27,3 @@ class ProductForm(forms.ModelForm):
                 field.widget.attrs["class"] = "border-black rounded-pill"
             else:
                 field.widget.attrs["class"] = "border-black rounded"
-     
