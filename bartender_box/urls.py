@@ -30,3 +30,5 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 HANDLER404 = 'bartender-box.views.handler404'
+HANDLER403 = 'bartender-box.views.handler403'
+HANDLER500 = 'bartender-box.views.handler500'
