@@ -1,2 +1,4 @@
 User-agent: *
 Disallow: /accounts/
+Disallow: /checkout/
+Sitemap: https://bartender-box.herokuapp.com/sitemap.xml
