@@ -51,43 +51,6 @@ body {
     height: 17px;
   }
 
-@media (min-width: 1200px) {
-    .container {
-        max-width : 80%;
-    }
-}
-
-@media (min-width : 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index : 1030;
-    }
-
-    .header-container {
-        padding-top :164px;
-    }
-}
-
-@media (max-width : 991px) {
-    .header-container {
-        padding-top: 200px;
-    }
-
-    body {
-        height: calc(100vh - 183px);
-    }
-
-    .navbar-nav {
-        float: right;
-        text-align: right;
-    }
-    .nav-item > a {
-        margin-right: 1rem !important;
-    }
-}
 
 /* ---- Index welcome page ---- */
 #index-image {
@@ -342,4 +305,65 @@ body {
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #dc3545;
     border-radius: 0;
+}
+
+
+/* ----- MEDIA QUERIES ----- */
+
+
+@media (min-width: 1200px) {
+    .container {
+        max-width : 80%;
+    }
+}
+
+@media (min-width : 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index : 1030;
+    }
+
+    .header-container {
+        padding-top :164px;
+    }
+}
+
+@media (max-width : 991px) {
+    .header-container {
+        padding-top: 200px;
+    }
+
+    body {
+        height: calc(100vh - 183px);
+    }
+
+    .navbar-nav {
+        float: right;
+        text-align: right;
+    }
+    .nav-item > a {
+        margin-right: 1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-text {
+        font-size: 0.8rem;
+    }
+
+    .welcome-text > h2 {
+        font-size: 1.2rem;
+        margin-bottom : 10px;
+    }
+    .welcome-text > p {
+        font-size: 0.8rem;
+    }
+
+    .welcome-text button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
 }
