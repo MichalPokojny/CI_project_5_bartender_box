@@ -316,6 +316,10 @@ footer {
     padding: 20px 5px 20px;
 }
 
+.newsletter {
+    width: 90%;
+    margin: 0 auto;
+}
 
 .social-link {
     color:#eeda90;
