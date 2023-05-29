@@ -307,6 +307,30 @@ body {
     border-radius: 0;
 }
 
+/* ----- FOOTER ----- */
+
+footer {
+    margin-top: 10px;
+    color: #eeda90;
+    background-color: #000;
+    padding: 20px 5px 20px;
+}
+
+
+.social-link {
+    color:#eeda90;
+    font-size: 1.3rem;
+    transition: color 0.4s ease-in-out;
+    margin: 0 10px;
+}
+
+.social-link:hover {
+    color: #FFF;
+}
+
+.legal > a{
+    color:#eeda90;
+}
 
 /* ----- MEDIA QUERIES ----- */
 
@@ -348,6 +372,7 @@ body {
         margin-right: 1rem !important;
     }
 }
+
 
 @media (max-width: 480px) {
     .banner-text {
