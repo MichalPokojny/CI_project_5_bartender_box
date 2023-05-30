@@ -1,6 +1,8 @@
 # pylint: disable=no-member
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth import get_user_model
+from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
@@ -84,16 +86,32 @@ def review_submit(request, product_id):
         form = ReviewForm(request.POST)
 
         if form.is_valid():
-            review = form.save(commit=False)
-            review.product = product
-            review.user = request.user
+            User = get_user_model()
+            user_profile = User.objects.get(username=request.user.username)
+
+            review = Review.objects.filter(
+                product=product, user=user_profile).first()
+
+            if review:
+                review.comment = form.cleaned_data['comment']
+                review.date_modified = timezone.now()
+                messages.info(request, 'Review edited!')
+            else:
+                review = form.save(commit=False)
+                review.product = product
+                review.user = user_profile
+                messages.info(request, 'Review added!')
+
             review.save()
             return redirect('product_detail', product_id=product_id)
     else:
         form = ReviewForm()
 
+    reviews = Review.objects.filter(product=product)
+
     context = {
         'product': product,
+        'reviews': reviews,
         'form': form,
     }
     return render(request, 'products/product_detail.html', context)

@@ -118,6 +118,18 @@ main {
     z-index: 999999;
   }
 
+  .btn-review {
+    border: 1px solid #000000;
+    background: #eeda90 !important;
+    color: #000 !important;
+  }
+
+  .btn-review:hover {
+    color: #eeda90 !important;
+    background: #000 !important;
+  }
+
+
 /* ----- Toasts ----- */
 
   .custom-toast {
