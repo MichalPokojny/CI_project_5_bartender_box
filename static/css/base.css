@@ -63,12 +63,11 @@ main {
     background: url('../media/index-image.jpg') no-repeat left center fixed;
     background-color: #000;
     background-size: contain;
-    height: calc(100vh - 100px);
+    height: calc(110vh - 100px);
 }
 
 .welcome-text {
     width: 90%;
-    
     margin: 0 10%;
   }
   
@@ -341,6 +340,10 @@ footer {
 
 .legal > a{
     color:#eeda90;
+}
+
+#mc-embedded-subscribe {
+    margin: 0 !important;
 }
 
 /* ----- MEDIA QUERIES ----- */
