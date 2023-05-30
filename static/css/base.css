@@ -98,6 +98,12 @@ main {
     color: #eeda90;
   }
 
+  .welcome-text button:hover {
+    color: #000000;
+    background-color: #eeda90;
+  }
+
+
   /* ----- Products page ----- */
 
   a.category-badge > span.badge:hover {
