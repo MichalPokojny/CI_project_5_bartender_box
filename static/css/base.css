@@ -394,7 +394,7 @@ footer {
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 670px) {
     .banner-text {
         font-size: 0.8rem;
     }

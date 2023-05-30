@@ -1,7 +1,7 @@
 # pylint: disable=no-member
 from django import forms
 from .widgets import CustomClearableFileInput
-from .models import Product, Category
+from .models import Product, Category, Review
 
 
 class ProductForm(forms.ModelForm):
@@ -27,3 +27,9 @@ class ProductForm(forms.ModelForm):
                 field.widget.attrs["class"] = "border-black rounded-pill"
             else:
                 field.widget.attrs["class"] = "border-black rounded"
+
+
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ['rating', 'comment']

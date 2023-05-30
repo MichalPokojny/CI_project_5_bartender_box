@@ -97,6 +97,29 @@
             </div>
         </div>
     </div>
+    <div class="text-center">
+        <h2>Customer Reviews</h2>
+        {% for review in reviews %}
+            <div class="review">
+                <p><strong>{{ review.user.username }}</strong> - {{ review.created_at }}</p>
+                <p>Rating: {{ review.rating }}</p>
+                <p>{{ review.comment }}</p>
+            </div>
+        {% empty %}
+            <p>No reviews available.</p>
+        {% endfor %}
+    </div>
+    <div class="mt-5">
+        <!-- Display add comment form if user authenticated-->
+        {% if user.is_authenticated %}
+        <h3 style="color: #FFF" class="text-center">Leave a comment:</h3>
+        <p  class="text-center">Posting as: {{ user.username }}</p>
+        <form method="post" class="comment-form text-center">
+           {{ review_submit | as p}}
+           {% csrf_token %}
+           <button type="submit" class="btn btn-secondary rounded-pill mt-3 float-end">Submit</button>
+        </form>
+        {% endif %}
 
 {% endblock %}
 
