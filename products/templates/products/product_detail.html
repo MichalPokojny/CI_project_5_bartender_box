@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 {% load static %}
 
 {% block page_header %}
@@ -101,8 +102,7 @@
         <h2>Customer Reviews</h2>
         {% for review in reviews %}
             <div class="review">
-                <p><strong>{{ review.user.username }}</strong> - {{ review.created_at }}</p>
-                <p>Rating: {{ review.rating }}</p>
+                <p><strong>{{ review.user }}</strong> - {{ review.created_at }}</p>
                 <p>{{ review.comment }}</p>
             </div>
         {% empty %}
@@ -112,11 +112,11 @@
     <div class="mt-5">
         <!-- Display add comment form if user authenticated-->
         {% if user.is_authenticated %}
-        <h3 style="color: #FFF" class="text-center">Leave a comment:</h3>
+        <h3 class="text-center">Leave a review:</h3>
         <p  class="text-center">Posting as: {{ user.username }}</p>
-        <form method="post" class="comment-form text-center">
-           {{ review_submit | as p}}
-           {% csrf_token %}
+        <form method="POST" action="{% url 'review_submit' product_id=product.id %}" class="comment-form text-center">
+            {% csrf_token %}
+            {{ form | crispy }}
            <button type="submit" class="btn btn-secondary rounded-pill mt-3 float-end">Submit</button>
         </form>
         {% endif %}
