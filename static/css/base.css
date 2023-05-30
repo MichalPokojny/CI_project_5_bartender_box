@@ -8,11 +8,17 @@ html {
 body {
     font-family: 'Comme', sans-serif;
     background-color: #eeda90;
+    height: 100%;
 }
 
 .text-black {
     color:#000 !important;
 }
+
+main {
+    min-height: 100%;
+    position: relative;
+  }
 
 /* ---- NAVBAR ---- */
 
@@ -310,6 +316,7 @@ body {
 /* ----- FOOTER ----- */
 
 footer {
+    bottom: 0;
     margin-top: 10px;
     color: #eeda90;
     background-color: #000;
