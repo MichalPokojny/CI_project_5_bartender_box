@@ -156,11 +156,9 @@
                 <div id="mce-responses" class="clear foot">
                     <div class="response text-center" id="mce-error-response" style="display:none"></div>
                     <div class="response text-center" id="mce-success-response" style="display:none"></div>
-                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                </div>
                 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_27d5e1ce3b7647351dd024c5f_52f87430c5" tabindex="-1" value=""></div>
               </div>
-              <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-              <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
               <div class="col-md-4 text-center">
                 <h4 class="font-weight-bold my-3">Contact & Social</h4>
                 <p><i class="fa-solid fa-phone"></i> +357 89 000 0000</p>
@@ -168,8 +166,8 @@
                 <p><i class="fa-solid fa-envelope"></i> michal.pokojny@hotmail.com</p>
                 <div class="social-icons mt-3">
                   <a href="#" class="social-link" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
-                  <a href="#" class="social-link" target="_blank" rel="noopener"><i class="fa-brands fa-square-twitter"></i></a>
-                  <a href="#" class="social-link" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://twitter.com/" class="social-link" target="_blank" rel="noopener"><i class="fa-brands fa-square-twitter"></i></a>
+                  <a href="https://www.instagram.com/" class="social-link" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
                 </div>
               </div>
             </div>
@@ -188,6 +186,12 @@
     
     <!-- Core Javascript -->
     {% block corejs %}
+    <!-- Mailchimp -->
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+    <script type='text/javascript'>
+    (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);
+    </script>
+    <!-- jQuery -->
     <script 
         src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" 
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" 
@@ -198,11 +202,13 @@
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" 
         crossorigin="anonymous">
     </script>
+    <!-- Bootstrap -->
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" 
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" 
         crossorigin="anonymous">
     </script>
+    <!-- Font Awesome -->
     <script 
         src="https://kit.fontawesome.com/5a006fcb56.js" crossorigin="anonymous">
     </script>
