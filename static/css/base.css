@@ -46,6 +46,7 @@ main {
 }
 
 .fa-cart-shopping .count {
+    font-family: 'Raleway', sans-serif;
     position: absolute;
     top: -24px;
     right: -10px;

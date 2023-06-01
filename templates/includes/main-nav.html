@@ -14,7 +14,6 @@
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
 
@@ -26,7 +25,7 @@
                 <a href="{% url 'products' %}?category=vodka" class="dropdown-item">Vodka</a>
                 <a href="{% url 'products' %}?category=gin" class="dropdown-item">Gin</a>
                 <a href="{% url 'products' %}?category=whiskey" class="dropdown-item">Whiskey</a>
-                <a href="{% url 'products' %}?category=vodka,gin,whiskey" class="dropdown-item">All Cocktails</a>
+                <a href="{% url 'products' %}?category=vodka,gin,whiskey,brandy,rum,tequila" class="dropdown-item">All Cocktails</a>
             </div>
         </li>
 
