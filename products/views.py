@@ -16,15 +16,14 @@ from .forms import ProductForm, ReviewForm
 def all_products(request):
     """ View for show all products """
 
-    products = Product.objects.all()
+    products = Product.objects.annotate(average_rating=Avg('ratings__value'))
     query = None
     categories = None
     sort = None
     direction = None
 
     for product in products:
-        rating = Rating.objects.filter(product=product).aggregate(Avg('rating_value'))
-        product.rating = rating['rating_value__avg']
+        product.average_rating = product.ratings.aggregate(Avg('value')).get('value__avg', 0)
 
     if request.GET:
         if 'sort' in request.GET:
@@ -73,7 +72,7 @@ def product_detail(request, product_id):
     """ View for individual product """
 
     product = get_object_or_404(Product, pk=product_id)
-    average_rating = product.ratings.aggregate(Avg('rating_value')).get('rating_value__avg', 0)
+    average_rating = product.ratings.aggregate(Avg('value')).get('value__avg', 0)
     reviews = Review.objects.filter(product=product)
     form = ReviewForm()
 

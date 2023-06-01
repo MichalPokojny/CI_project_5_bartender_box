@@ -75,8 +75,8 @@
                                                 </a>
                                             </p>
                                             {% endif %}
-                                            {% if average_rating %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ average_rating }} / 5 | <i class="fa-regular fa-comment"></i> {{ product.review_set.count }}</small>
+                                            {% if product.average_rating %}
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.average_rating|floatformat:"-1" }} / 5 | <i class="fa-regular fa-comment"></i> {{ product.review_set.count }}</small>
                                             {% else %}
                                                 <small class="text-muted">No Rating | <i class="fa-regular fa-comment"></i> {{ product.review_set.count }}</small>
                                             {% endif %}
