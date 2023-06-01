@@ -18,7 +18,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = True
 
 ALLOWED_HOSTS = ['bartender-box.herokuapp.com', '8000-michalpokojny-ci-project-1rc3p7gzfc.us2.codeanyapp.com']
-# 8000-michalpokojny-ci-project-1rc3p7gzfc.us2.codeanyapp.com
 
 
 # Application definition
@@ -41,6 +40,7 @@ INSTALLED_APPS = [
     'profiles',
     'crispy_forms',
     'storages',
+    'wishlist',
 ]
 
 MIDDLEWARE = [
@@ -120,9 +120,6 @@ else:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 

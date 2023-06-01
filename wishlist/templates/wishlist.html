@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center my-3">
+                <h1 class="my-3">My Wishlist</h1>
+                <div class="table-responsive rounded">
+                    <table class="table table-sm table-borderless">
+                        <thead class="text-black">
+                            <tr>
+                                <th scope="col">Product Image</th>
+                                <th scope="col">Product Name</th>
+                                <th scope="col">Added at</th>
+                            </tr>
+                            
+                        </thead>
+                        {% for item in wishlist_items %}
+                        <tr>
+                            <td class="w-25">
+                                <a href="{% url 'product_detail' item.product.id %}">
+                                <img src="{{ item.product.image.url }}" class="w-25" alt="{{ review.product.name }} Image">
+                                 </a>
+                            </td>
+                            <td>
+                                <a href="{% url 'product_detail' item.product.id %} " class="text-decoration-none text-black">
+                                <p>{{ item.product.name }}</p>
+                                 </a>
+                            </td>
+                            <td class="w-25">
+                                <a href="{% url 'product_detail' item.product.id %}" class="text-decoration-none text-black">
+                                <p>{{ item.added_at }}</p>
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>      
+            </div>
+        </div>
+    </div>
+{% endblock %}                

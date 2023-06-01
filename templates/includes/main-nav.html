@@ -35,15 +35,12 @@
                 Reviews
             </a>
         </li>
-        <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Special Offers
+        {% if request.user.is_authenticated %}
+        <li class="nav-item ">
+            <a class="font-weight-bold nav-link text-black mr-5" href="{% url 'wishlist' %}">
+                Wishlist
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
-                <a href="{% url 'products' %}?category=clearence" class="dropdown-item">Clearance</a>
-                <a href="{% url 'products' %}?category=deals,clearence" class="dropdown-item">All Specials</a>
-            </div>
         </li>
+        {% endif %}
     </ul>
 </div>

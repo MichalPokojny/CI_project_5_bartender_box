@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
+from wishlist.models import WishlistItem
 from .models import Product, Category, Review
 from .forms import ProductForm, ReviewForm
 
@@ -69,6 +70,20 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.filter(product=product)
     form = ReviewForm()
+
+    if request.method == 'POST':
+        if 'add_to_wishlist' in request.POST:
+            if request.user.is_authenticated:
+                wishlist_item = WishlistItem.objects.filter(
+                    user=request.user, product=product).first()
+                if not wishlist_item:
+                    wishlist_item = WishlistItem.objects.create(
+                        user=request.user, product=product)
+                    messages.info(request, 'Product added to wishlist!')
+                else:
+                    messages.error(
+                        request, 'Product is already in your wishlist.')
+            return redirect('product_detail', product_id=product_id)
 
     context = {
         'product': product,
