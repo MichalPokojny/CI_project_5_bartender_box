@@ -57,6 +57,16 @@ main {
     height: 17px;
   }
 
+  .wishlist-count {
+    top: -0.5px;
+    position: absolute;
+    background-color: red;
+    color: #eeda90;
+    font-size: 7px;
+    padding: 0 4px 20px 4px;
+    border-radius: 50rem;
+    height: 17px;
+  }
 
 /* ---- Index welcome page ---- */
 #index-image {

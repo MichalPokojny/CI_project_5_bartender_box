@@ -39,6 +39,9 @@
         <li class="nav-item ">
             <a class="font-weight-bold nav-link text-black mr-5" href="{% url 'wishlist' %}">
                 Wishlist
+                {% if wishlist_count %}
+                 <span class="wishlist-count">{{ wishlist_count }}</span>
+                {% endif %}   
             </a>
         </li>
         {% endif %}
