@@ -117,6 +117,14 @@ def review_submit(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+def all_reviews(request):
+    reviews = Review.objects.all()
+    context = {
+        'reviews': reviews
+    }
+    return render(request, 'products/all_reviews.html', context)    
+
+
 @login_required
 def add_product(request):
     """Add a product to the store"""

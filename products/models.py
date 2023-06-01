@@ -1,3 +1,4 @@
+# pylint: disable=no-member
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -7,7 +8,7 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = "Categories"
-    
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -37,6 +38,7 @@ class Product(models.Model):
 
 
 class Review(models.Model):
+    """ Model for reviews """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     comment = models.TextField()
@@ -45,3 +47,9 @@ class Review(models.Model):
 
     def __str__(self):
         return f"Review by {self.user} on {self.product.name}"
+
+    def number_of_comments(self):
+        """
+        Returns the number of comments for the post
+        """
+        return self.product.review_set.count()

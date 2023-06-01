@@ -76,9 +76,9 @@
                                             </p>
                                             {% endif %}
                                             {% if product.rating %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5 | <i class="fa-regular fa-comment"></i> {{ product.review_set.count }}</small>
                                             {% else %}
-                                            <small class="text-muted">No rating</small>  
+                                                <small class="text-muted">No Rating | <i class="fa-regular fa-comment"></i> {{ product.review_set.count }}</small>
                                             {% endif %}  
                                             {% if request.user.is_superuser %}
                                             <br>
