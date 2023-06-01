@@ -75,11 +75,11 @@
                                                 </a>
                                             </p>
                                             {% endif %}
-                                            {% if product.rating %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5 | <i class="fa-regular fa-comment"></i> {{ product.review_set.count }}</small>
+                                            {% if average_rating %}
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ average_rating }} / 5 | <i class="fa-regular fa-comment"></i> {{ product.review_set.count }}</small>
                                             {% else %}
                                                 <small class="text-muted">No Rating | <i class="fa-regular fa-comment"></i> {{ product.review_set.count }}</small>
-                                            {% endif %}  
+                                            {% endif %}
                                             {% if request.user.is_superuser %}
                                             <br>
                                                 <small>

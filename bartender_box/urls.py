@@ -28,6 +28,7 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
     path('wishlist/', include('wishlist.urls')),
+    path('rating/', include(('rating.urls', 'rating'), namespace='rating')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 HANDLER404 = 'bartender-box.views.handler404'

@@ -4,10 +4,11 @@ from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
-from django.db.models import Q
+from django.db.models import Q, Avg
 from django.db.models.functions import Lower
 
 from wishlist.models import WishlistItem
+from rating.models import Rating
 from .models import Product, Category, Review
 from .forms import ProductForm, ReviewForm
 
@@ -20,6 +21,10 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
+
+    for product in products:
+        rating = Rating.objects.filter(product=product).aggregate(Avg('rating_value'))
+        product.rating = rating['rating_value__avg']
 
     if request.GET:
         if 'sort' in request.GET:
@@ -68,6 +73,7 @@ def product_detail(request, product_id):
     """ View for individual product """
 
     product = get_object_or_404(Product, pk=product_id)
+    average_rating = product.ratings.aggregate(Avg('rating_value')).get('rating_value__avg', 0)
     reviews = Review.objects.filter(product=product)
     form = ReviewForm()
 
@@ -87,6 +93,7 @@ def product_detail(request, product_id):
 
     context = {
         'product': product,
+        'average_rating': average_rating,
         'reviews': reviews,
         'form': form,
     }
