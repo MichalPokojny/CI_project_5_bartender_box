@@ -59,12 +59,11 @@ main {
   }
 
   .wishlist-count {
-    top: -0.5px;
     position: absolute;
     background-color: red;
     color: #eeda90;
-    font-size: 7px;
-    padding: 0 4px 20px 4px;
+    font-size: 8px;
+    padding: 0 4px 15px 4px;
     border-radius: 50rem;
     height: 17px;
   }
@@ -439,5 +438,13 @@ footer {
     .welcome-text button {
         padding: 0.5rem 1rem;
         font-size: 1rem;
+    }
+
+    .navbar > ul {
+        margin-left: auto;
+    }
+    
+    .nav-link {
+        padding : 0.5rem 0.5rem;
     }
 }
