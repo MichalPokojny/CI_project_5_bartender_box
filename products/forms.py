@@ -24,7 +24,7 @@ class ProductForm(forms.ModelForm):
         self.fields["category"].choices = friendly_names
         for field_name, field in self.fields.items():
             if field_name != "description":
-                field.widget.attrs["class"] = "border-black rounded-pill"
+                field.widget.attrs["class"] = "category-badge text-black text-decoration-none border border-dark rounded-pill"
             else:
                 field.widget.attrs["class"] = "border-black rounded"
 

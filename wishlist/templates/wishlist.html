@@ -22,6 +22,7 @@
                                 <th scope="col">Product Image</th>
                                 <th scope="col">Product Name</th>
                                 <th scope="col">Added at</th>
+                                <th scope="col"></th>
                             </tr>
                             
                         </thead>
@@ -41,6 +42,12 @@
                                 <a href="{% url 'product_detail' item.product.id %}" class="text-decoration-none text-black">
                                 <p>{{ item.added_at|date:"F d, Y" }}</p>
                                 </a>
+                            </td>
+                            <td class="w-25">
+                                <form method="POST" action="{% url 'wishlist_remove' item.id %}">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-outline-danger btn-sm">Remove from Wishlist</button>
+                                </form>
                             </td>
                         </tr>
                     {% endfor %}

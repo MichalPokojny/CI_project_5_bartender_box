@@ -11,5 +11,8 @@ class WishlistItem(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     added_at = models.DateTimeField(auto_now_add=True)
 
+    def delete_from_wishlist(self):
+        self.delete()
+
     def __str__(self):
         return f"{self.user.username}'s Wishlist: {self.product.name}"

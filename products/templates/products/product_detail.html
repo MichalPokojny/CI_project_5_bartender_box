@@ -63,7 +63,7 @@
                               </button>
                            </div>
                            <input class="form-control rate_input id_rate_{{ product.id }} rounded-pill" style="width:fit-content; flex: none;"
-                              type="number" name="rating" value="1" 
+                              type="number" name="rating" value='{{ rating|floatformat:"-0" }}'
                               min="1" max="5" data-item_id="{{ product.id }}" 
                               id="id_rate_{{ product.id }}">
                            <div class="input-group-append">
@@ -80,7 +80,7 @@
             {% if request.user.is_authenticated %}
             {% get_user_rating product request.user as rating %}
             {% if rating %}
-            <p class="text-muted">Your Rating: {{ rating }}</p>
+            <p class="text-muted">Your Rating: {{ rating|floatformat:"-0" }}</p>
             {% else %}
             <p class="text-muted">You haven't rated this product yet.</p>
             {% endif %}
