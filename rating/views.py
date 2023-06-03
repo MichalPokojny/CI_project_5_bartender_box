@@ -6,6 +6,8 @@ from products.models import Product
 
 @login_required
 def rate_product(request, product_id):
+    """Rate a product"""
+    
     product = get_object_or_404(Product, id=product_id)
 
     if request.method == 'POST':

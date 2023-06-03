@@ -7,6 +7,7 @@
 {% endblock %}
 
 {% block page_header %}
+   <!-- Header section -->
     <div class="container header-container">
         <div class="row">
             <div class="col"></div>
@@ -15,6 +16,7 @@
 {% endblock %}
 
 {% block content %}
+<!-- Main content -->
     <div class="container">
         <div class="row">
             <div class="col">
@@ -36,12 +38,15 @@
                     </div>
                 </div>
                 {% for item in bag_items %}
+                 <!-- Loop over bag items -->
                     <div class="row">
                         <div class="col-2 mb-1">
                             <a href="{% url 'product_detail' item.product.id %}">
                                 {% if item.product.image %}
+                                <!-- Display the product image if available -->
                                     <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                                 {% else %}
+                                <!-- Display a placeholder image if no product image available -->
                                     <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                 {% endif %}
                             </a>
@@ -58,6 +63,7 @@
                 <hr class="my-0">
                 <div class="row text-black text-right">
                     <div class="col-7 offset-2">
+                        <!-- Order total, delivery, and grand total -->
                         <p class="my-0">Order Total:</p>
                         <p class="my-0">Delivery:</p>
                         <p class="my-0">Grand Total:</p>
@@ -110,7 +116,8 @@
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
 
-                    <div class="submit-button text-right mt-5 mb-2">                    
+                    <div class="submit-button text-right mt-5 mb-2">  
+                        <!-- Adjust bag button -->                  
 						<a href="{% url 'view_bag' %}" class="category-badge text-decoration-none">
                             <span class="p-2 mt-2 badge badge-white text-black rounded-pill border border-dark">
 							<span class="icon">
@@ -120,6 +127,7 @@
                         </span>
 						</a>
 						<button id="submit-button" class="category-badge text-black text-decoration-none border border-dark rounded-pill">
+                               <!-- Complete order button -->
                             <span class="p-2 badge badge-white ">
 							<span class="font-weight-bold">Complete Order</span>
 							<span class="icon">

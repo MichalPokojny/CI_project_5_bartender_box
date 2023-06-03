@@ -80,6 +80,9 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    """
+    Individual line item of a customer order.
+    """
     order = models.ForeignKey(
         Order,
         null=False,

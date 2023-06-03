@@ -101,6 +101,7 @@ def product_detail(request, product_id):
 
 
 def review_submit(request, product_id):
+    """Submit a review for a product"""
     product = Product.objects.get(pk=product_id)
 
     if request.method == 'POST':
@@ -139,6 +140,7 @@ def review_submit(request, product_id):
 
 
 def all_reviews(request):
+    """View for displaying all reviews"""
     reviews = Review.objects.all()
     context = {
         'reviews': reviews

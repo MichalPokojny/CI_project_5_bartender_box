@@ -136,6 +136,7 @@ main {
   }
 
   .btn-review:hover {
+    /* Flip color of the button */
     color: #eeda90 !important;
     background: #000 !important;
   }
@@ -151,7 +152,7 @@ main {
     height: 2px;
   }
 
-  /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+/* Styles for arrow-up triangle */
 .arrow-up {
     width: 0; 
     height: 0; 
@@ -196,6 +197,7 @@ main {
     border-bottom-color: #343a40 !important;
 }
 
+/* Styles for bag notification wrapper */
 .bag-notification-wrapper {
     height: 100px;
     overflow-x: hidden;
@@ -379,12 +381,14 @@ footer {
 
 
 @media (min-width: 1200px) {
+    /* Styles for container at 1200px and above */
     .container {
         max-width : 80%;
     }
 }
 
 @media (min-width : 992px) {
+    /* Styles for desktop view */
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
@@ -399,6 +403,7 @@ footer {
 }
 
 @media (max-width : 991px) {
+    /* Styles for tablet,mobile view */
     .header-container {
         padding-top: 200px;
     }
@@ -418,6 +423,7 @@ footer {
 
 
 @media (max-width: 670px) {
+    /* Styles for extra small mobile devices */
     .banner-text {
         font-size: 0.8rem;
     }
