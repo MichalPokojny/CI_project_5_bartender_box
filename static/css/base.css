@@ -99,7 +99,7 @@ main {
     font-family: 'Raleway', sans-serif;
   }
   
-  .welcome-text button {
+  .welcome-text a {
     padding: 1rem 2rem;
     font-size: 1.5rem;
     border-radius: 15px;
@@ -108,13 +108,18 @@ main {
     color: #eeda90;
   }
 
-  .welcome-text button:hover {
+  .welcome-text a:hover {
     color: #000000;
     background-color: #eeda90;
   }
 
 
   /* ----- Products page ----- */
+
+  .badge {
+
+    width: 100px ;
+  }
 
   a.category-badge > span.badge:hover {
     background: #212529 !important;

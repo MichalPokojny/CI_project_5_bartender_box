@@ -79,7 +79,7 @@
 
 {% block extra_js %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         let countrySelected = $('#id_default_country').val();
         if(!countrySelected) {
             $('#id_default_country').css('color', '#aab7c4');
