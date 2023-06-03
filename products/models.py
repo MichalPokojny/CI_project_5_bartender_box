@@ -37,7 +37,7 @@ class Product(models.Model):
 
 class Review(models.Model):
     """ Model for reviews """
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     comment = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
@@ -51,3 +51,4 @@ class Review(models.Model):
         Returns the number of comments for the post
         """
         return self.product.review_set.count()
+
