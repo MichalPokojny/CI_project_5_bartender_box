@@ -112,7 +112,7 @@
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </div>
                         </form>
-                        {% if request.user.is_superuser %}
+                        {% if request.user.is_authenticated %}
                         <form method="POST">
                             {% csrf_token %}
                         <button type="submit" name="add_to_wishlist" class="p-2 mt-2 text-black text-uppercase add-to-bag-btn">Add to Wishlist</button>

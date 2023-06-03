@@ -50,7 +50,7 @@
                             </td>
                             <td class="w-25">
                                 <a href="{% url 'product_detail' review.product.id %}" class="text-decoration-none text-black">
-                                <p>{{ review.created_at }}</p>
+                                <p>{{ review.created_at | date:"F d, Y"  }}</p>
                                 </a>
                             </td>
                         </tr>
