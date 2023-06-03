@@ -1,0 +1,66 @@
+<script type="text/javascript">
+
+    // Disable +/- buttons outside 1-5 range
+    function handleEnableDisable(itemId) {
+        var currentValue = parseInt($(`#id_rate_${itemId}`).val());
+        var minusDisabled = currentValue <= 1;
+        var plusDisabled = currentValue >= 5;
+        $(`#decrement-rate_${itemId}`).prop('disabled', minusDisabled);
+        $(`#increment-rate_${itemId}`).prop('disabled', plusDisabled);
+    }
+
+    // Ensure proper enabling/disabling of all inputs on page load
+    var allRateInputs = $('.rate_input');
+    for(var i = 0; i < allRateInputs.length; i++){
+        var itemId = $(allRateInputs[i]).data('item_id');
+        handleEnableDisable(itemId);
+    }
+
+    // Check enable/disable every time the input is changed
+    $('.rate_input').change(function() {
+        var itemId = $(this).data('item_id');
+        var currentValue = parseInt($(this).val());
+        
+        // Ensure the value is within the range 1-5
+        if (currentValue < 1 || isNaN(currentValue)) {
+            currentValue = 1;
+        } else if (currentValue > 5) {
+            currentValue = 5;
+        }
+        
+        $(this).val(currentValue);
+        handleEnableDisable(itemId);
+    });
+
+    // Increment rate
+    $('.increment-rate').click(function(e) {
+       e.preventDefault();
+       var closestInput = $(this).closest('.input-group').find('.rate_input')[0];
+       var currentValue = parseInt($(closestInput).val());
+       var itemId = $(this).data('item_id');
+       
+       // Increment the value and ensure it stays within the range 1-5
+       if (currentValue < 5) {
+           currentValue += 1;
+       }
+       
+       $(closestInput).val(currentValue);
+       handleEnableDisable(itemId);
+    });
+
+    // Decrement rate
+    $('.decrement-rate').click(function(e) {
+       e.preventDefault();
+       var closestInput = $(this).closest('.input-group').find('.rate_input')[0];
+       var currentValue = parseInt($(closestInput).val());
+       var itemId = $(this).data('item_id');
+       
+       // Decrement the value and ensure it stays within the range 1-5
+       if (currentValue > 1) {
+           currentValue -= 1;
+       }
+       
+       $(closestInput).val(currentValue);
+       handleEnableDisable(itemId);
+    });
+</script>
