@@ -1,15 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block page_header %}
-
 <div class="container header-container">
    <div class="row">
       <div class="col"></div>
    </div>
 </div>
 {% endblock %}
-
 {% block content %}
 <div class="container">
    <div class="row">
@@ -26,32 +23,30 @@
          <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
             {% csrf_token %}
             {% for field in form %}
-                {% if field.name != 'image' %}
-                    {{ field | as_crispy_field }}
-                {% else %}
-                    {{ field }}
-                {% endif %}
+            {% if field.name != 'image' %}
+            {{ field | as_crispy_field }}
+            {% else %}
+            {{ field }}
+            {% endif %}
             {% endfor %}
             <div class="text-right">
                <a href="{% url 'products' %}" aria-label="Go to the products page" class="category-badge text-decoration-none">
-                <span class="p-2 mt-2 badge badge-white text-black rounded-pill border border-dark">Cancel</span></a>
+               <span class="p-2 mt-2 badge badge-white text-black rounded-pill border border-dark">Cancel</span></a>
                <button id="submit-button" class="category-badge text-black text-decoration-none border border-dark rounded-pill" type="submit" aria-label="Add Product">
-                <span class="p-2 badge badge-white ">
-                    <span class="font-weight-bold">Add Product</span></span></button>
+               <span class="p-2 badge badge-white ">
+               <span class="font-weight-bold">Add Product</span></span></button>
             </div>
          </form>
       </div>
    </div>
 </div>
-
 {% endblock %}
-
 {% block extra_js %}
-    {{ block.super }}
-    <script>
-        $('#new-image').change(function() {
-            var file = $('#new-image')[0].files[0];
-            $('#filename').text(`Image will be set to: ${file.name}`);
-        });
-    </script>
+{{ block.super }}
+<script>
+   $('#new-image').change(function() {
+       var file = $('#new-image')[0].files[0];
+       $('#filename').text(`Image will be set to: ${file.name}`);
+   });
+</script>
 {% endblock %}
