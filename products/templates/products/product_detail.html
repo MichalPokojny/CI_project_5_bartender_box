@@ -76,7 +76,7 @@
                         </div>
                      </div>
                      <button type="submit" class="p-2 mt-2 text-black text-uppercase add-to-bag-btn">Rate Product</button>
-            </form>
+            
             {% if request.user.is_authenticated %}
             {% get_user_rating product request.user as rating %}
             {% if rating %}
@@ -89,6 +89,7 @@
             {% endif %}
             </div>
             </div>
+        </form>
             <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                {% csrf_token %}
                <div class="form-row">
@@ -165,6 +166,7 @@
    {{ form | crispy }}
    <button type="submit" class="btn btn-review rounded-pill mt-3 float-end">Submit</button>
 </form>
+</div>
 {% endif %}
 {% endblock %}
 {% block extra_js %}
