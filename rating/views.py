@@ -1,4 +1,5 @@
 # pylint: disable=no-member
+from django.contrib import messages
 from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.decorators import login_required
 from .models import Rating
@@ -18,8 +19,10 @@ def rate_product(request, product_id):
         if rating:
             rating.value = rating_value
             rating.save()
+            messages.info(request, 'You have updated your rating.')
         else:
             rating = Rating.objects.create(user=request.user, product=product, value=rating_value)
+            messages.info(request, 'You have rated the product.')
 
         # Redirect to the product detail page or display a success message
         return redirect('product_detail', product_id=product.id)
