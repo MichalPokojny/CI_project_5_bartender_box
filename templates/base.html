@@ -225,6 +225,10 @@
     {% block extra_js %}
     <script>
         $('.toast').toast('show');
+        // set timer for 5 s to dispose toast
+        setTimeout(function() {
+                $('.toast').toast('hide');
+            }, 5000); 
     </script>
     {% endblock %}
   </body>
