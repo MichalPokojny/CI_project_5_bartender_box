@@ -38,7 +38,7 @@
     <header class="containter-fluid fixed-top">
         <div id="delivery-banner" class="row text-center">
             <div class="col top-banner">
-                <h5 class="my-1 banner-text">Free delivery on orders over €60 !</h5>                
+                <h5 class="my-1 banner-text">Free delivery on orders over €60 !</h5>
             </div>            
         </div>
         <div class="row d-none d-lg d-lg-flex" id="topnav">
@@ -104,8 +104,46 @@
                 
                 {% include 'includes/top-header-small.html' %}   
                
-                {% include 'includes/main-nav.html' %}
-            
+                <div class="collapse navbar-collapse" id="main-nav">
+                    <ul class="navbar-nav w-auto mx-auto" style="padding-left: 0px;">
+                        <li class="nav-item ">
+                            <a class="font-weight-bold nav-link nav-link-main text-black mr-5 {% block home %}{% endblock %}" href="{% url 'home' %}">
+                              Home
+                            </a>
+                            
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="font-weight-bold nav-link nav-link-main text-black mr-5 {% block products %}{% endblock %}" href="#" id="cocktails-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Cocktails
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="cocktails-link">
+                                <a href="{% url 'products' %}?category=vodka" class="dropdown-item">Vodka</a>
+                                <a href="{% url 'products' %}?category=gin" class="dropdown-item">Gin</a>
+                                <a href="{% url 'products' %}?category=whiskey" class="dropdown-item">Whiskey</a>
+                                <a href="{% url 'products' %}?category=brandy" class="dropdown-item">Brandy</a>
+                                <a href="{% url 'products' %}?category=tequila" class="dropdown-item">Tequila</a>
+                                <a href="{% url 'products' %}?category=rum" class="dropdown-item">Rum</a>
+                                <a href="{% url 'products' %}?category=vodka,gin,whiskey,brandy,rum,tequila" class="dropdown-item">All Cocktails</a>
+                            </div>
+                        </li>
+                
+                        <li class="nav-item ">
+                            <a class="font-weight-bold nav-link nav-link-main text-black mr-5 {% block reviews %}{% endblock %}" href="{% url 'all_reviews' %}">
+                                Reviews
+                            </a>
+                        </li>
+                        {% if request.user.is_authenticated %}
+                        <li class="nav-item ">
+                            <a class="font-weight-bold nav-link nav-link-main text-black mr-5 {% block wishlist %}{% endblock %}" href="{% url 'wishlist' %}">
+                                Wishlist
+                                {% if wishlist_count %}
+                                 <span class="wishlist-count">{{ wishlist_count }}</span>
+                                {% endif %}   
+                            </a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
             </nav>
         </div>
         

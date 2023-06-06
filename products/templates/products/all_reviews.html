@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% block reviews %}active text-center{% endblock %}
 {% block page_header %}
 <div class="container header-container">
    <div class="row">
@@ -27,7 +28,7 @@
                <tr>
                   <td class="w-25">
                      <a href="{% url 'product_detail' review.product.id %}">
-                     <img src="{{ review.product.image.url }}" class="w-25" alt="{{ review.product.name }} Image">
+                     <img src="{{ review.product.image.url }}" class="w-75" alt="{{ review.product.name }} Image">
                      </a>
                   </td>
                   <td>
