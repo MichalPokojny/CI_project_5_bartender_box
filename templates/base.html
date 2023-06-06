@@ -110,10 +110,9 @@
                             <a class="font-weight-bold nav-link nav-link-main text-black mr-5 {% block home %}{% endblock %}" href="{% url 'home' %}">
                               Home
                             </a>
-                            
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="font-weight-bold nav-link nav-link-main text-black mr-5 {% block products %}{% endblock %}" href="#" id="cocktails-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="font-weight-bold nav-link nav-link-main text-center text-black mr-5 {% block products %}{% endblock %}" href="#" id="cocktails-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Cocktails
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="cocktails-link">
@@ -126,7 +125,6 @@
                                 <a href="{% url 'products' %}?category=vodka,gin,whiskey,brandy,rum,tequila" class="dropdown-item">All Cocktails</a>
                             </div>
                         </li>
-                
                         <li class="nav-item ">
                             <a class="font-weight-bold nav-link nav-link-main text-black mr-5 {% block reviews %}{% endblock %}" href="{% url 'all_reviews' %}">
                                 Reviews
