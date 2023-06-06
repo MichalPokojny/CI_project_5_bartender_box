@@ -11,7 +11,7 @@
 {% block content %}
 <div class="container-fluid">
    <div class="row">
-      <div class="col text-center my-3">
+      <div class="col text-center mb-3">
          <h2>Products</h2>
          {% for c in current_categories %}
          <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
@@ -20,7 +20,7 @@
          {% endfor %}
       </div>
    </div>
-   <div class="row">
+   <div class="row mb-3">
       <div class="product-container col-10 offset-1">
          <div class="row mt-1 mb-2">
             <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">

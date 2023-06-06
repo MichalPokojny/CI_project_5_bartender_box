@@ -12,7 +12,7 @@
 {% endblock %}
 {% block content %}
 <div class="container-fluid">
-   <div class="row">
+   <div class="row mb-3">
       <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
          <div class="image-container my-5">
             {% if product.image %}
@@ -147,7 +147,7 @@
       </div>
    </div>
 </div>
-<div class="text-center">
+<div class="text-center mb-3">
    <h2>Customer Reviews</h2>
    {% for review in reviews %}
    <div class="review">
@@ -158,7 +158,7 @@
    <p>No reviews available.</p>
    {% endfor %}
 </div>
-<div class="mt-5 col-md-6 offset-md-3">
+<div class="mt-5 col-md-6 offset-md-3 mb-3">
    <!-- Display add comment form if user authenticated-->
    {% if user.is_authenticated %}
    <h3 class="text-center">Leave a review:</h3>
