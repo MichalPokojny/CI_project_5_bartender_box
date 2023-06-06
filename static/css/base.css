@@ -89,7 +89,7 @@
      background: url('../media/index-image.jpg') no-repeat left center;
      background-color: #000;
      background-size: contain;
-     height: calc(110vh - 100px);
+     height: calc(110vh - 83px);
 }
  .welcome-text {
      width: 90%;
