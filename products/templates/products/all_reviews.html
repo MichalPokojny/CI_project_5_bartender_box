@@ -24,6 +24,7 @@
                      <th scope="col">Date</th>
                   </tr>
                </thead>
+               {% if reviews %}
                {% for review in reviews %}
                <tr>
                   <td class="w-25">
@@ -53,6 +54,9 @@
                   </td>
                </tr>
                {% endfor %}
+               {% else %}
+                <h4 class="my-3">There are no reviews yet.</h4>
+                {% endif %}
             </table>
          </div>
       </div>

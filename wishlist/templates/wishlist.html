@@ -26,6 +26,7 @@
                             </tr>
                             
                         </thead>
+                        {% if wishlist_items %}
                         {% for item in wishlist_items %}
                         <tr>
                             <td class="w-25">
@@ -51,6 +52,9 @@
                             </td>
                         </tr>
                     {% endfor %}
+                    {% else %}
+                    <h4 class="my-3">No items have been added to your Wishlist yet.</h4>
+                    {% endif %}
                 </table>
             </div>      
             </div>
