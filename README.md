@@ -7,7 +7,7 @@ This project is an e-commerce website built to sell pre-made cocktails. The webs
 The website is built using Django framework, and follows an agile methodology approach for development.
 
 <p align="center">
-<img src="./assets/readme/responsive-image.png">
+<img src="./assets/readme/responsive.jpg">
 </p>
 
 [Live version of my project](https://bartender-box.herokuapp.com/)

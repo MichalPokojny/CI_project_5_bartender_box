@@ -122,17 +122,19 @@
                      </div>
                   </div>
                   <div class="col-12">
+                    <span class="category-badge text-decoration-none">
+                        <input type="submit" class="p-2 mt-1 text-black text-uppercase add-to-bag-btn" value="Add to Bag">
+                    </span>
+                    <br>
                      <a href="{% url 'products' %}" class="category-badge text-decoration-none">
                      <span class="p-2 mt-1 badge badge-white text-black rounded-pill border border-dark">
                      <span class="icon">
                      </span>
-                     <span class="text-uppercase"><i class="fas fa-chevron-left"></i>Keep Shopping</span>
+                     <span class="text-uppercase"><i class="fas fa-chevron-left"></i> Keep Shopping</span>
                      </span>
                      </a>
-                     <br>
-                     <span class="category-badge text-decoration-none">
-                     <input type="submit" class="p-2 mt-1 text-black text-uppercase add-to-bag-btn" value="Add to Bag">
-                     </span>
+                     
+                    
                   </div>
                   <input type="hidden" name="redirect_url" value="{{ request.path }}">
                </div>
