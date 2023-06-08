@@ -131,7 +131,7 @@ The wireframes for this project can be accessed [here.](./WIREFRAMES.md)
 ### Database diagram
 
 <p align="center">
-<img src="./assets/other/database_diagram.png">
+<img src="./assets/readme/database_diagram.jpg">
 </p>
 
 ### Typography and colour scheme

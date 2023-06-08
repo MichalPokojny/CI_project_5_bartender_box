@@ -208,8 +208,6 @@ Profile
 
 * When an action is performed, a message is shown in the container, providing feedback or confirmation to the user. The message remains visible for 5 seconds and is then automatically dismissed.
 
-* The container is designed to catch the user's attention without being intrusive. It uses a visually appealing layout and styling to ensure that the message stands out.
-
 <p align="center">
 <img src="./assets/features/message_success.jpg">
 </p>
