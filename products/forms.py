@@ -1,6 +1,7 @@
 # pylint: disable=no-member
 from django import forms
 from .widgets import CustomClearableFileInput
+from django.core.validators import MaxLengthValidator
 from .models import Product, Category, Review
 
 
@@ -30,6 +31,11 @@ class ProductForm(forms.ModelForm):
 
 
 class ReviewForm(forms.ModelForm):
+    comment = forms.CharField(
+        widget=forms.Textarea(attrs={'rows': 4}),
+        validators=[MaxLengthValidator(250)]  
+    )
+
     class Meta:
         model = Review
         fields = ['comment']

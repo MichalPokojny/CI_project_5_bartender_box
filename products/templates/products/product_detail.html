@@ -149,12 +149,15 @@
       </div>
    </div>
 </div>
+
 <div class="text-center mb-3">
    <h2>Customer Reviews</h2>
    {% for review in reviews %}
    <div class="review">
       <p><strong>{{ review.user }}</strong> {% if review.updated_on %} - {{ review.updated_on }} {% else %}  - {{ review.created_at }} {% endif %}</p>
+      <div class="w-75 mx-auto">
       <p>{{ review.comment }}</p>
+    </div>
    </div>
    {% empty %}
    <p>No reviews available.</p>
