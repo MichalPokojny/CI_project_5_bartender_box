@@ -12,7 +12,6 @@
      color:#000 !important;
 }
  main {
-     min-height: 100%;
      position: relative;
 }
 /* ---- NAVBAR ---- */
@@ -39,7 +38,7 @@
      position: absolute;
      top: -24px;
      right: -10px;
-     background-color: red;
+     background-color: #FF0000;
      color: #eeda90;
      font-size: 7px;
      padding: 9px 4px;
@@ -48,7 +47,7 @@
 }
  .wishlist-count {
      position: absolute;
-     background-color: red;
+     background-color: #FF0000;
      color: #eeda90;
      font-size: 8px;
      padding: 0 4px 15px 4px;

@@ -138,19 +138,14 @@ The wireframes for this project can be accessed [here.](./WIREFRAMES.md)
 
 #### Fonts
 
-* For Carousel cover I used font:
-<p align="center">
-<img src="./assets/other/carousel_font.png">
-</p>
-
 * For general body text I used font :
 <p align="center">
-<img src="./assets/other/body_text_font.png">
+<img src="./assets/readme/font_body.jpg">
 </p>
 
 * For navigation bar I used font :
 <p align="center">
-<img src="./assets/other/navbar_font.png">
+<img src="./assets/readme/navbar_font.jpg">
 </p>
 
 <br>
@@ -160,7 +155,7 @@ The wireframes for this project can be accessed [here.](./WIREFRAMES.md)
 Colour pallet used for this website.
 
 <p align="center">
-<img src="./assets/other/colors.png">
+<img src="./assets/readme/colors.jpg">
 </p>
 
 ## Features
@@ -170,10 +165,10 @@ Features of this project can be accessed [here.](./FEATURES.md)
 
 ## Future features
 
+* Add pagination numbers to display certain number of products per page.
 * Update the website to display messages when the user logs in, registers, or logs out.
-* Enhance the blog posts by integrating Google Maps API to show the location of the blog post's place.
 * Upgrade to support social authentication in addition to normal login.
-* Enable the author to edit or delete post comments.
+* Enable the author to edit or delete review comments.
 * Allow registered users to upload profile images.
 
 ## Testing
@@ -211,16 +206,21 @@ Testing of this project can be accessed [here.](./TESTING.md)
   -  JSHint: Used for validating the JavaScript code.
   -  Bing Image Creator: Used for generate cocktail images for the website.
   -  Microsoft Word: Used for testing documentation.
+  -  GitHub Copilot: Used to help understand developed code.
 
 ### Python packages
 
 * asgiref
+* backports.zoneinfo
+* boto3
+* botocore 
 * dj-database-url
-* dj3-cloudinary-storage
 * Django
 * django-allauth
+* django-countries
 * django-crispy-forms
-* django-summernote
+* django-storages
+* jmespath
 * gunicorn
 * oauthlib
 * psycopg2
@@ -228,7 +228,9 @@ Testing of this project can be accessed [here.](./TESTING.md)
 * python3-openid
 * pytz
 * requests-oauthlib
+* s3transfer
 * sqlparse
+* stripe
 
 ## Deployment
 
@@ -271,10 +273,10 @@ For deployment this project on Heroku, you need to follow these steps:
 5. Press Enter and the project will be cloned to you local machine.
 
 ## Credits
-* https://www.youtube.com/@AdrianTwarog (Creating the navbar)
-* https://www.youtube.com/@Codemycom (Django walkthrough)
-* Inspiration and some of the code of this project were taken from [Code Institute walkthrough project](https://github.com/Code-Institute-Solutions/Django3blog) and fellow students at Code Institue.
-* https://www.youtube.com/@KevinPowell Footer social links effect.
+
+* https://www.youtube.com/@Codemycom Django walkthrough
+* Inspiration and some of the code of this project were taken from [Code Institute walkthrough project](https://github.com/Code-Institute-Solutions/boutique_ado_v1) and fellow students at Code Institue.
+* https://www.youtube.com/@KevinPowell CSS effects.
 
 
 ## Acknowledgements
