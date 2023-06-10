@@ -220,6 +220,9 @@ Testing of this project can be accessed [here.](./TESTING.md)
   -  Bing Image Creator: Used for generate cocktail images for the website.
   -  Microsoft Word: Used for testing documentation.
   -  GitHub Copilot: Used to help understand developed code.
+  -  Mailchimp: Newsletter subscription service.
+  -  Facebook: Creating business page.
+
 
 ### Python packages
 
