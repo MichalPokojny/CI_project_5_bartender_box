@@ -180,7 +180,9 @@ Features of this project can be accessed [here.](./FEATURES.md)
 
 * The marketing strategy for Bartender Box incorporates a Facebook business page as a key component. The Facebook page serves as a platform to showcase the shop's news, promotions, and offerings, aiming to establish a positive brand image. Through consistent promotion of products and regular content updates, the page endeavors to enhance its visibility and draw in a growing customer base, encouraging them to make purchases from the online store.
 
-
+<p align="center">
+<img src="./assets/readme/facebook.jpg">
+</p>
 
 ## Testing
 
