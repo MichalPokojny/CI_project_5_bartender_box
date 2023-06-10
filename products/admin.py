@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Product, Category, Review
 
+
 # Register the Product model with the admin site
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
@@ -14,6 +15,7 @@ class ProductAdmin(admin.ModelAdmin):
 
     ordering = ('sku',)
 
+
 # Register the Review model with the admin site
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
@@ -23,6 +25,7 @@ class ReviewAdmin(admin.ModelAdmin):
         'comment',
         'created_at'
     )
+
 
 # Register the Category model with the admin site
 @admin.register(Category)

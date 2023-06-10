@@ -51,4 +51,3 @@ class Review(models.Model):
         Returns the number of comments for the post
         """
         return self.product.review_set.count()
-

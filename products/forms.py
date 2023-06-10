@@ -25,7 +25,8 @@ class ProductForm(forms.ModelForm):
         self.fields["category"].choices = friendly_names
         for field_name, field in self.fields.items():
             if field_name != "description":
-                field.widget.attrs["class"] = "category-badge text-black text-decoration-none border border-dark rounded-pill"
+                field.widget.attrs["class"] = "category-badge text-black \
+                    text-decoration-none border border-dark rounded-pill"
             else:
                 field.widget.attrs["class"] = "border-black rounded"
 
@@ -33,7 +34,7 @@ class ProductForm(forms.ModelForm):
 class ReviewForm(forms.ModelForm):
     comment = forms.CharField(
         widget=forms.Textarea(attrs={'rows': 4}),
-        validators=[MaxLengthValidator(250)]  
+        validators=[MaxLengthValidator(250)]
     )
 
     class Meta:

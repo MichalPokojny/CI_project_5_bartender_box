@@ -23,7 +23,8 @@ def all_products(request):
     direction = None
 
     for product in products:
-        product.rating = product.ratings.aggregate(Avg('value')).get('value__avg', 0)
+        product.rating = product.ratings.aggregate(
+            Avg('value')).get('value__avg', 0)
 
     if request.GET:
         if 'sort' in request.GET:
@@ -145,7 +146,7 @@ def all_reviews(request):
     context = {
         'reviews': reviews
     }
-    return render(request, 'products/all_reviews.html', context)    
+    return render(request, 'products/all_reviews.html', context)
 
 
 @login_required
@@ -222,5 +223,5 @@ def delete_product(request, product_id):
     messages.info(request, f"Product '{product_name}' deleted!")
     # Delete the product instance
     product.delete()
-  
+
     return redirect(reverse("products"))
