@@ -166,7 +166,6 @@ Features of this project can be accessed [here.](./FEATURES.md)
 ## Future features
 
 * Add pagination numbers to display certain number of products per page.
-* Update the website to display messages when the user logs in, registers, or logs out.
 * Upgrade to support social authentication in addition to normal login.
 * Enable the author to edit or delete review comments.
 * Allow registered users to upload profile images.
