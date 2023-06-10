@@ -6,6 +6,10 @@ Python
 
 * Python code was tested using PEP8 Code Institute [Python Linter Validator](https://pep8ci.herokuapp.com/)
 
+<details>
+
+<summary> Validation Output</summary>
+
 **Bag app**
 
 apps.py
@@ -217,6 +221,8 @@ views.py
 <img src="./assets/test/wishlist-views.jpg">
 </p>
 
+</details>
+
 HTML
 
 * HTML code was tested using [W3 Validator](https://validator.w3.org/)
@@ -224,7 +230,7 @@ HTML
 Every page has passed the W3 validator
 
 <p align="center">
-<img src="./assets/test/html_validator.png">
+<img src="./assets/test/html_validator.jpg">
 </p>
 
 CSS
@@ -232,15 +238,21 @@ CSS
 * CSS code was tested using [Jigsaw W3 Validator](https://jigsaw.w3.org/)
 
 <p align="center">
-<img src="./assets/test/css_validator.png">
+<img src="./assets/test/css-validator.jpg">
 </p>
 
 JavaScript
 
 * Javascript code was tested using [JSHint](https://jshint.com/)
 
+main.js
 <p align="center">
-<img src="./assets/test/javascript_validator.png">
+<img src="./assets/test/mainjs.jpg">
+</p>
+
+stripe_elements.js
+<p align="center">
+<img src="./assets/test/stripejs.jpg">
 </p>
 
 ## Browser Testing
@@ -257,102 +269,19 @@ The website has been tested thoroughly on several different browsers.
 
 Lighthouse was used to test performance, Accesibility, Best Practices and SEO of the website.
 
-<details>
-
-<summary>Desktop</summary>
-
-Home page 
+Desktop Results:
 
 <p align="center">
-<img src="./assets/test/home_desktop.png">
+<img src="./assets/test/lighthouse.jpg">
 </p>
 
-About us page 
+Mobile Results:
 
 <p align="center">
-<img src="./assets/test/about_desktop.png">
+<img src="./assets/test/lighthouse-mobile.jpg">
 </p>
 
-Blog page 
-
-<p align="center">
-<img src="./assets/test/blog_desktop.png">
-</p>
-
-Contact Us page 
-
-<p align="center">
-<img src="./assets/test/contact_desktop.png">
-</p>
-
-Search page 
-
-<p align="center">
-<img src="./assets/test/search_desktop.png">
-</p>
-
-Profile page 
-
-<p align="center">
-<img src="./assets/test/profile_desktop.png">
-</p>
-
-Logout page 
-
-<p align="center">
-<img src="./assets/test/logout_desktop.png">
-</p>
-
-</details>
-
-<details>
-
-<summary>Mobile</summary>
-
-Home page 
-
-<p align="center">
-<img src="./assets/test/home_phone.png">
-</p>
-
-About us page 
-
-<p align="center">
-<img src="./assets/test/about_phone.png">
-</p>
-
-Blog page 
-
-<p align="center">
-<img src="./assets/test/blog_phone.png">
-</p>
-
-Contact Us page 
-
-<p align="center">
-<img src="./assets/test/contact_phone.png">
-</p>
-
-Search page 
-
-<p align="center">
-<img src="./assets/test/search_phone.png">
-</p>
-
-Profile page 
-
-<p align="center">
-<img src="./assets/test/profile_phone.png">
-</p>
-
-Logout page 
-
-<p align="center">
-<img src="./assets/test/logout_phone.png">
-</p>
-
-</details>
-
+## User story testing
 
 ## Black box manual testing
 
@@ -428,12 +357,6 @@ Logout page
 
 
 ## Unsolved Bugs
-
-*  Updating post can update all fields except featured image: This means that users can make changes to all parts of a post, including the title, body text, and other fields, but they cannot update the featured image. If they want to change the image, they will need to upload a new one.
-
-* Clicking on page numbers sometimes won't react: This is a user experience issue where users may click on a page number in the pagination, but the page does not load or react. This can be frustrating for users who are trying to navigate the website. This issue needs to be addressed to ensure a smooth user experience.
-
-* In search results comment count is not showing: This means that when users search for posts, the comment count is not displayed in the search results. This information is important for users who want to quickly see how many comments a post has received. The comment count should be added to the search results to improve user experience.
 
 
 [Back to README.](./README.md)

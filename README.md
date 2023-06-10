@@ -170,6 +170,18 @@ Features of this project can be accessed [here.](./FEATURES.md)
 * Enable the author to edit or delete review comments.
 * Allow registered users to upload profile images.
 
+## Business Model
+
+* The business model chosen for Bartender Box website is based on a traditional e-commerce approach, where customers have the option to make single purchases of bartending-related products.
+* Customers are free to explore and buy products as they desire, without any recurring commitments. The online store offers a diverse range of cocktails. The focus is on providing a seamless shopping experience, secure payment processing, and efficient order fulfillment to ensure customer satisfaction.
+* Newsletter subscriptions and a Facebook page are utilized as marketing strategies to promote the Bartender Box brand and attract customers.
+
+##  Marketing
+
+* The marketing strategy for Bartender Box incorporates a Facebook business page as a key component. The Facebook page serves as a platform to showcase the shop's news, promotions, and offerings, aiming to establish a positive brand image. Through consistent promotion of products and regular content updates, the page endeavors to enhance its visibility and draw in a growing customer base, encouraging them to make purchases from the online store.
+
+
+
 ## Testing
 
 Testing of this project can be accessed [here.](./TESTING.md)
