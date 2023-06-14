@@ -497,19 +497,19 @@ Users can navigate back to the product list or continue with other actions like 
 <Summary>TEST PLAN</Summary>
 
 <p align="center">
-<img src="./assets/test/test_plan_1.png">
+<img src="./assets/test/test-plan1.jpg">
 </p>
 
 <p align="center">
-<img src="./assets/test/test_plan_2.png">
+<img src="./assets/test/test-plan2.jpg">
 </p>
 
 <p align="center">
-<img src="./assets/test/test_plan_3.png">
+<img src="./assets/test/test-plan3.jpg">
 </p>
 
 <p align="center">
-<img src="./assets/test/test_plan_4.png">
+<img src="./assets/test/test-plan4.jpg">
 </p>
 
 </details>
@@ -519,27 +519,27 @@ Users can navigate back to the product list or continue with other actions like 
 <Summary>TEST DATA</Summary>
 
 <p align="center">
-<img src="./assets/test/test_data_1.png">
+<img src="./assets/test/test-data1.jpg">
 </p>
 
 <p align="center">
-<img src="./assets/test/test_data_2.png">
+<img src="./assets/test/test-data2.jpg">
 </p>
 
 <p align="center">
-<img src="./assets/test/test_data_3.png">
+<img src="./assets/test/test-data3.jpg">
 </p>
 
 <p align="center">
-<img src="./assets/test/test_data_4.png">
+<img src="./assets/test/test-data4.jpg">
 </p>
 
 <p align="center">
-<img src="./assets/test/test_data_5.png">
+<img src="./assets/test/test-data5.jpg">
 </p>
 
 <p align="center">
-<img src="./assets/test/test_data_6.png">
+<img src="./assets/test/test-data6.jpg">
 </p>
 
 </details>
@@ -549,15 +549,15 @@ Users can navigate back to the product list or continue with other actions like 
 <Summary>TEST LOG</Summary>
 
 <p align="center">
-<img src="./assets/test/test_log_1.png">
+<img src="./assets/test/test-log1.jpg">
 </p>
 
 <p align="center">
-<img src="./assets/test/test_log_2.png">
+<img src="./assets/test/test-log2.jpg">
 </p>
 
 <p align="center">
-<img src="./assets/test/test_log_3.png">
+<img src="./assets/test/test-log3.jpg">
 </p>
 
 </details>
