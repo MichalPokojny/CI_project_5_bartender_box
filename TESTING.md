@@ -563,7 +563,4 @@ Users can navigate back to the product list or continue with other actions like 
 </details>
 
 
-## Unsolved Bugs
-
-
 [Back to README.](./README.md)

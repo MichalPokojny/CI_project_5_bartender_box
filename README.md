@@ -222,6 +222,7 @@ Testing of this project can be accessed [here.](./TESTING.md)
   -  GitHub Copilot: Used to help understand developed code.
   -  Mailchimp: Newsletter subscription service.
   -  Facebook: Creating business page.
+  -  Gmail: Sending and recieving emails from customers.
 
 
 ### Python packages
